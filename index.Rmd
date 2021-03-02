@@ -1,0 +1,102 @@
+---
+title: "My Website"
+description: |
+  Welcome to the website. I hope you enjoy it!
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# Learn more about creating websites with Distill at:
+# https://rstudio.github.io/distill/website.html
+
+# Learn more about publishing to GitHub Pages at:
+# https://rstudio.github.io/distill/publish_website.html#github-pages
+
+```
+
+
+```{r, results='asis', echo=FALSE, message=FALSE}
+cat(
+  "<script src='https://cdn.jsdelivr.net/npm/vue@2.6.12'></script>",
+  "<script src='https://unpkg.com/quantum-tensors@0.4.10/dist/quantum-tensors.min.js'></script>",
+  "<script src='https://unpkg.com/bra-ket-vue@0.3.1/dist/bra-ket-vue.min.js'></script>"
+)
+```
+
+## Hadamard
+
+<div id='op-h'></div>
+
+
+## Vector Display
+
+<div id='ket0'></div>
+
+```{js,results='asis', echo=FALSE, message=FALSE}
+const { Elements, Vector, Operator, Gates, Dimension, Cx, Circuit } = QuantumTensors;
+const { MatrixViewer, KetListViewer, KetViewer } = BraKetVue;
+const operator = Elements.beamSplitter(45);
+const spinZ = Operator.fromSparseCoordNames([
+  ['u', 'u', Cx(1)],
+  ['d', 'd', Cx(-1)],
+], [Dimension.spin()]);
+
+
+new Vue({
+  el: "#op-h",
+  template: "<matrix-viewer :operator-raw='operator' :dark-mode='false' />",
+  components: {
+    MatrixViewer
+  },
+  data() {
+  	return {
+    	operator: Gates.H()
+		}
+  }
+})
+
+const uvec=[];
+Circuit.qubits(2)
+  .saveTo(uvec)
+  .addQubit(Vector.fromArray([Cx(0.5),Cx(0.5)],[Dimension.qubit()]),2)
+  .saveTo(uvec);
+  
+  
+function showState(elName, vector) {
+  new Vue({
+    el: elName,
+    template: "<ket-viewer :vector='vector' :dark-mode='false'/>",
+    components: {
+      KetViewer,
+    },
+    data() {
+  	  return { vector }
+    }
+  })
+}
+
+
+showState('#ket0', uvec[1].vector)
+
+<!-- new Vue({ -->
+<!-- el:"#disvec", -->
+<!--   template: "<ket-viewer :vector='vector' :dark-mode='false'/>", -->
+<!--   components: { -->
+<!--     KetViewer, -->
+<!--   }, -->
+<!--   data() { -->
+<!-- 	  return { -->
+<!-- 	    vector: uvec[0] -->
+<!-- 	  } -->
+<!--   } -->
+<!-- }) -->
+
+```
+
+```{css, echo=FALSE}
+.matrix-viewer {
+  margin: auto;
+}
+```

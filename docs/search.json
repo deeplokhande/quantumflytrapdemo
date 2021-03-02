@@ -1,0 +1,21 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "This is a demo for Quantum Flytrap Summer Internship",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-03-01T23:36:04-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "My Website",
+      "description": "Welcome to the website. I hope you enjoy it!\n",
+      "author": [],
+      "contents": "\r\n\r\n\r\nHadamard\r\n\r\n\r\n\r\nVector Display\r\n\r\n\r\n\r\n\r\n\r\nconst { Elements, Vector, Operator, Gates, Dimension, Cx, Circuit } = QuantumTensors;\r\nconst { MatrixViewer, KetListViewer, KetViewer } = BraKetVue;\r\nconst operator = Elements.beamSplitter(45);\r\nconst spinZ = Operator.fromSparseCoordNames([\r\n  ['u', 'u', Cx(1)],\r\n  ['d', 'd', Cx(-1)],\r\n], [Dimension.spin()]);\r\n\r\n\r\nnew Vue({\r\n  el: \"#op-h\",\r\n  template: \"<matrix-viewer :operator-raw='operator' :dark-mode='false' />\",\r\n  components: {\r\n    MatrixViewer\r\n  },\r\n  data() {\r\n    return {\r\n        operator: Gates.H()\r\n        }\r\n  }\r\n})\r\n\r\nconst uvec=[];\r\nCircuit.qubits(2)\r\n  .saveTo(uvec)\r\n  .addQubit(Vector.fromArray([Cx(0.5),Cx(0.5)],[Dimension.qubit()]),2)\r\n  .saveTo(uvec);\r\n  \r\n  \r\nfunction showState(elName, vector) {\r\n  new Vue({\r\n    el: elName,\r\n    template: \"<ket-viewer :vector='vector' :dark-mode='false'/>\",\r\n    components: {\r\n      KetViewer,\r\n    },\r\n    data() {\r\n      return { vector }\r\n    }\r\n  })\r\n}\r\n\r\n\r\nshowState('#ket0', uvec[1].vector)\r\n\r\n<!-- new Vue({ -->\r\n<!-- el:\"#disvec\", -->\r\n<!--   template: \"<ket-viewer :vector='vector' :dark-mode='false'/>\", -->\r\n<!--   components: { -->\r\n<!--     KetViewer, -->\r\n<!--   }, -->\r\n<!--   data() { -->\r\n<!--      return { -->\r\n<!--        vector: uvec[0] -->\r\n<!--      } -->\r\n<!--   } -->\r\n<!-- }) -->\r\n\r\n\r\n\r\n\r\n.matrix-viewer {\r\n  margin: auto;\r\n}\r\n\r\n\r\n\r\n\r\n",
+      "last_modified": "2021-03-01T23:42:20-05:00"
+    }
+  ],
+  "collections": []
+}
