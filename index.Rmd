@@ -1,7 +1,7 @@
 ---
-title: "My Website"
+title: "Quantum FlyTrap Demo"
 description: |
-  Welcome to the website. I hope you enjoy it!
+  Welcome to the demo. I hope you enjoy it!
 site: distill::distill_website
 ---
 
@@ -34,6 +34,12 @@ cat(
 
 <div id='ket0'></div>
 
+
+## Temp Vector
+
+<div id='ones'></div>
+
+
 ```{js,results='asis', echo=FALSE, message=FALSE}
 const { Elements, Vector, Operator, Gates, Dimension, Cx, Circuit } = QuantumTensors;
 const { MatrixViewer, KetListViewer, KetViewer } = BraKetVue;
@@ -56,11 +62,11 @@ new Vue({
 		}
   }
 })
-
+<!-- .addQubit(Vector.fromArray([Cx(0.5),Cx(0.1)],[Dimension.qubit()]),1) -->
 const uvec=[];
 Circuit.qubits(2)
   .saveTo(uvec)
-  .addQubit(Vector.fromArray([Cx(0.5),Cx(0.5)],[Dimension.qubit()]),2)
+  .addQubit(Vector.fromArray([Cx(0.9),Cx(0.1)],[Dimension.qubit()]),3)
   .saveTo(uvec);
   
   
@@ -72,26 +78,20 @@ function showState(elName, vector) {
       KetViewer,
     },
     data() {
-  	  return { vector }
-    }
+  	  return { vector };
+    },
   })
 }
 
 
 showState('#ket0', uvec[1].vector)
 
-<!-- new Vue({ -->
-<!-- el:"#disvec", -->
-<!--   template: "<ket-viewer :vector='vector' :dark-mode='false'/>", -->
-<!--   components: { -->
-<!--     KetViewer, -->
-<!--   }, -->
-<!--   data() { -->
-<!-- 	  return { -->
-<!-- 	    vector: uvec[0] -->
-<!-- 	  } -->
-<!--   } -->
-<!-- }) -->
+
+const temp=Vector.fromArray([Cx(0.9),Cx(0.1)],[Dimension.qubit()]);
+
+showState('#ones',temp)
+
+
 
 ```
 
