@@ -109,8 +109,8 @@ Let me know if you need anything else regarding this project.
 
 - Contact Details: 
   - Phone: +1-(848)-252-0653
-  - Email: [deep.lokhande@rutgers.edu](deep.lokhande@rutgers.edu)
-  - Webpage: [deeplokhande.github.io](deeplokhande.github.io)
+  - Email: [deep.lokhande@rutgers.edu](mailto:deep.lokhande@rutgers.edu)
+  - Webpage: [deeplokhande.github.io](https://deeplokhande.github.io)
   
 
 # THANK YOU
