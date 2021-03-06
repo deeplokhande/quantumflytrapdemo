@@ -85,22 +85,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>My Website: Quantum FlyTrap Demo</title>
+  <title>Quantum Flytrap Demo Site: Quantum FlyTrap Demo</title>
 
   <meta property="description" itemprop="description" content="Welcome to the demo. I hope you enjoy it!"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="My Website: Quantum FlyTrap Demo"/>
+  <meta property="og:title" content="Quantum Flytrap Demo Site: Quantum FlyTrap Demo"/>
   <meta property="og:type" content="article"/>
   <meta property="og:description" content="Welcome to the demo. I hope you enjoy it!"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="My Website"/>
+  <meta property="og:site_name" content="Quantum Flytrap Demo Site"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="My Website: Quantum FlyTrap Demo"/>
+  <meta property="twitter:title" content="Quantum Flytrap Demo Site: Quantum FlyTrap Demo"/>
   <meta property="twitter:description" content="Welcome to the demo. I hope you enjoy it!"/>
 
   <!--/radix_placeholder_meta_tags-->
@@ -2060,7 +2060,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">My Website</a>
+<a href="index.html" class="title">Quantum Flytrap Demo Site</a>
 </div>
 <div class="nav-right">
 <a href="index.html">Home</a>
@@ -2087,50 +2087,90 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <script src='https://unpkg.com/quantum-tensors@0.4.10/dist/quantum-tensors.min.js'></script>
 <script src='https://unpkg.com/bra-ket-vue@0.3.1/dist/bra-ket-vue.min.js'></script>
 </div>
-<h2 id="hadamard">Hadamard</h2>
+<p>Author: <strong>Deep Lokhande</strong></p>
+<hr />
+<h2 id="example-0-test-examples.">Example 0 Test Examples.</h2>
+<ul>
+<li>This section is included just to test if everthing loads properly.</li>
+<li>Proceed to next section for actual submission.</li>
+</ul>
+<h4 id="test-adding-user-defined-vector.">Test adding user defined vector.</h4>
+<div id="qtest">
+
+</div>
+<h4 id="test-adding-gatesoperators.">Test adding gates/operators.</h4>
 <div id="op-h">
 
 </div>
-<h2 id="vector-display">Vector Display</h2>
-<div id="ket0">
+<hr />
+<h2 id="example-1">Example 1</h2>
+<ul>
+<li>In this example we will look at the simple case of effect of pauli gates (<span class="math inline">\(H\)</span> and <span class="math inline">\(X\)</span>) on initial state.</li>
+</ul>
+<div id="ex1">
 
 </div>
-<h2 id="temp-vector">Temp Vector</h2>
-<div id="ones">
+<hr />
+<h2 id="example-2">Example 2</h2>
+<ul>
+<li>In this example we will look at matrix multiplication and tensor products of operators.</li>
+</ul>
+<h3 id="input-matrix">Input Matrix</h3>
+<ul>
+<li><p>This is a user defined operator using <code>Operator.fromArray()</code> function.</p></li>
+<li><p>For simplicity I have considered Hadamard Matrix, but an other matrix will work.</p>
+<div id="uin">
+
+</div></li>
+</ul>
+<h3 id="example-of-matrix-multiplication-h-cdot-h-i">Example of matrix multiplication <span class="math inline">\(H \cdot H = I\)</span></h3>
+<ul>
+<li>Here, we look at matrix multiplication between 2 Hadamard matrices.</li>
+<li>As we know that Hadamard matrix is unitary matrix, multiplying this matrix with itself will result in Identity matrix.</li>
+</ul>
+<div id="ex2mul">
 
 </div>
+<h3 id="example-of-tensor-multiplication-h-otimes-i">Example of tensor multiplication <span class="math inline">\(H \otimes I\)</span></h3>
+<ul>
+<li>Here, we look at tensor product of one Hadamard and Identity matrix.</li>
+<li>We will observe the dimensionality increase in the output matrix, where tensor product between two <span class="math inline">\(2 \times 2\)</span> matrices, result in a <span class="math inline">\(4 \times 4\)</span> matrix.</li>
+</ul>
+<div id="ex2ten">
+
+</div>
+<hr />
+<h2 id="quantum-teleportation">Quantum Teleportation</h2>
+<ul>
+<li><p>In this section, we will look at and example of Quantum Teleportation.</p></li>
+<li><p>The initial state can be chosen by user as <span class="math inline">\(|\psi\rangle = \alpha |0\rangle + \beta |1\rangle\)</span>.</p></li>
+<li><p>For simplicity here I chose <span class="math inline">\(|\psi\rangle = |1\rangle\)</span></p></li>
+<li><p>The steps in the teleportation are explained briefly in the value column of Ketlistviewer.</p></li>
+</ul>
+<div id="qtp">
+
+</div>
+<hr />
+<p>Hope the reviewer of this site will approve my work.</p>
+<p>Looking forward for working with you.</p>
+<p>Let me know if you need anything else regarding this project.</p>
+<ul>
+<li>Contact Details:
+<ul>
+<li>Phone: +1-(848)-252-0653</li>
+<li>Email: <a href="deep.lokhande@rutgers.edu">deep.lokhande@rutgers.edu</a></li>
+<li>Webpage: <a href="deeplokhande.github.io">deeplokhande.github.io</a></li>
+</ul></li>
+</ul>
+<h1 id="thank-you">THANK YOU</h1>
 <div class="layout-chunk" data-layout="l-body">
 <script type="text/javascript">
-const { Elements, Vector, Operator, Gates, Dimension, Cx, Circuit } = QuantumTensors;
+const { Circuit,Gates, Vector,  Dimension,  Cx,  Operator } = QuantumTensors;
 const { MatrixViewer, KetListViewer, KetViewer } = BraKetVue;
-const operator = Elements.beamSplitter(45);
-const spinZ = Operator.fromSparseCoordNames([
-  ['u', 'u', Cx(1)],
-  ['d', 'd', Cx(-1)],
-], [Dimension.spin()]);
+const rt2 = 1 / Math.sqrt(2);
 
-
-new Vue({
-  el: "#op-h",
-  template: "<matrix-viewer :operator-raw='operator' :dark-mode='false' />",
-  components: {
-    MatrixViewer
-  },
-  data() {
-    return {
-        operator: Gates.H()
-        }
-  }
-})
-<!-- .addQubit(Vector.fromArray([Cx(0.5),Cx(0.1)],[Dimension.qubit()]),1) -->
-const uvec=[];
-Circuit.qubits(2)
-  .saveTo(uvec)
-  .addQubit(Vector.fromArray([Cx(0.9),Cx(0.1)],[Dimension.qubit()]),3)
-  .saveTo(uvec);
   
-  
-function showState(elName, vector) {
+function showKet(elName, vector) {
   new Vue({
     el: elName,
     template: "<ket-viewer :vector='vector' :dark-mode='false'/>",
@@ -2138,27 +2178,175 @@ function showState(elName, vector) {
       KetViewer,
     },
     data() {
-      return { vector };
+      return { vector }
+    }
+  })
+}
+
+function showMatrix(elName, operator) {
+  return new Vue({
+    el: elName,
+    template: "<matrix-viewer :operator-raw='operator' :dark-mode='false'/>",
+    components: {
+      MatrixViewer,
     },
+    data() {
+      return { operator }
+    }
+  })
+}
+
+function showKetList(elName, list) {
+  return new Vue({
+    el: elName,
+    template: "<ket-list-viewer :steps='list' :dark-mode='false'/>",
+    components: {
+      KetListViewer,
+    },
+    data() {
+      return { list }
+    }
   })
 }
 
 
-showState('#ket0', uvec[1].vector)
+// Example 0 Code
+
+const qtest = Vector.fromArray(
+  [Cx(1), Cx(0), Cx(2, 1), Cx(0, -1)],
+  [Dimension.qubit(), Dimension.qubit()]
+).normalize();
+
+showKet('#qtest',qtest);
+
+showMatrix('#op-h',Gates.H());
+
+// Example 1 Code
+
+const qex1 = Vector.fromArray([Cx(1), Cx(0)], [Dimension.qubit()]).normalize();
+
+let ex1=[
+  {
+    value: "Initial State",
+    vector: qex1,
+  },
+  {
+    value: "After applying H gate on initial state",
+    vector: Gates.H().mulVec(qex1),
+  },
+  {
+    value: "After applying X gate on initial state",
+    vector: Gates.X().mulVec(qex1),
+  },
+];
 
 
-const temp=Vector.fromArray([Cx(0.9),Cx(0.1)],[Dimension.qubit()]);
-
-showState('#ones',temp)
+showKetList('#ex1',ex1);
 
 
+// Example 2 Code
 
+
+const uin = Operator.fromArray(
+  [
+    [Cx(rt2), Cx(rt2)],
+    [Cx(rt2), Cx(-rt2)],
+  ],
+  [Dimension.qubit()]
+);
+
+
+let ex2mul = uin.mulOp(uin);
+let ex2ten = uin.outer(Gates.I());
+
+
+showMatrix('#uin',uin);
+
+showMatrix('#ex2mul',ex2mul);
+
+showMatrix('#ex2ten', ex2ten);
+
+
+// Example 3 Code (TODO)
+
+
+
+// Quantum Teleportation
+
+
+const circh = [];
+let circ = Circuit.qubits(1)
+  // .applyGate(uin,0)
+  .X(0)
+  .saveTo(circh)
+  .addQubit()
+  .addQubit()
+  .H(1)
+  .CNOT(1, 2)
+  .saveTo(circh)
+  .CNOT(0, 1)
+  .H(0)
+  .saveTo(circh)
+  .CNOT(1,2)
+  .saveTo(circh)
+  .SWAP(0,2)
+  .saveTo(circh);
+
+// Following conditional statements could be used, but I choose different method to find the final answer.
+// if (circh[2].measureQubit(1)[1]["probability"] === 1) {
+//   circ.X(2);
+//   circ.saveTo(circh);
+// }
+// if (circh[2].measureQubit(0)[1]["probability"] === 1) {
+//   circ.Z(2);
+//   circ.saveTo(circh);
+// }
+
+let a = circh[4].measureQubit(0)[0]['probability'];
+let b = circh[4].measureQubit(0)[1]['probability'];
+let outState = Vector.fromArray(
+      [Cx(a),Cx(b)],
+      [Dimension.qubit()],
+      removeZeros = 'false',
+    ).normalize(); 
+
+let qtp = [
+  { 
+    value: "Initial state to be teleported on 0th qubit", 
+    vector: circh[0].vector 
+  },
+  {
+    value: "Adding 2 more qubits and creating Bell Pair on 1st and 2nd qubit",
+    vector: circh[1].vector,
+  },
+  {
+    value: "Alice does operations on 0th and 1st qubit",
+    vector: circh[2].vector,
+  },
+  {
+    value: "Bob does corrective operations",
+    vector: circh[3].vector,
+  },
+  {
+    value: "Bob does corrective operations",
+    vector: circh[4].vector,
+  },
+  {
+    value: "The teleported state is",
+    vector: outState,
+  },
+];
+
+showKetList('#qtp',qtp);
 </script>
 </div>
 <div class="layout-chunk" data-layout="l-body">
 <style type="text/css">
 .matrix-viewer {
   margin: auto;
+}
+a {
+  color: #42b983;
 }
 </style>
 </div>
@@ -2170,6 +2358,15 @@ showState('#ones',temp)
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->

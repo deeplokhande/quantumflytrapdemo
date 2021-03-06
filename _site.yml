@@ -1,7 +1,7 @@
 name: "quantumflytrapdemo"
-title: "My Website"
+title: "Quantum Flytrap Demo Site"
 description: |
-  My Website
+  Quantum Flytrap Demo.
 output_dir: "docs"
 navbar:
   right:
