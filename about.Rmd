@@ -2,6 +2,7 @@
 title: "About this site"
 description: |
   This is a demo for Quantum Flytrap Summer Internship
+  Link to the webpage: [deeplokhande.github.io/quantumflytrapdemo] 
 ---
 
 ```{r setup, include=FALSE}
